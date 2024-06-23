@@ -153,11 +153,11 @@ void setup()
 
   delay(3000);
 
-  // calibrateAccGyr();
+  calibrateAccGyr();
   readImuTime = millis();
 }
 
 void loop()
 {
-  readCalAccGyr();
+  // readCalAccGyr();
 }

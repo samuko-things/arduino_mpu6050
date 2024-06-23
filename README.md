@@ -1,18 +1,16 @@
-# sic_mpu9250_driver_code
-This is a child project of the Samuko IMU Compute for MPU9250 (`sic_mpu9250`) project. It contains the code that is uploaded into `sic_mpu9250_driver module` via an FTDI programmer.
+# arduino_mpu6050
+this is a sample code for using MPU6050 with madgwick filter
 
 
-## How to Use the Driver Code
-- Ensure you have the Arduino IDE up and running on your PC
-
+## How to Use the Code
 - Download (by clicking on the green Code button above) or clone the repo into your PC
 
-  > NOTE: it makes use of the `invensense-imu` library by bolder flight and `arduino_matrix_vector_lab` library by samuko-things and `imu_madgwick_filter` library by samuko-things. But all have been used in a concised way to accomodate the microcontroller code space. The license of the code is GPL3 due to license of the midgwick filter
+  > NOTE: it makes use of the [`imu_madgwick_filter`](https://github.com/samuko-things/imu_madgwick_filter) library by samuko-things. Ensure to install it.
 
-- Open the sic_mpu9250_driver_code folder
+- First open and run the calibration code to get the offset values - `axOff`, `ayOff`, `azOff`, `gxOff`, `gyOff`, and `gzOff`
 
-- Then open the `sic_mpu9250_driver_code.ino` or `sic_mpu9250_madgwick_filter` code in your Arduino IDE.
+- copy and paste the value the filter code. 
 
-- select the board - `Arduino UNO` - and PORT (for the FTDI programmer). 
+- run the filter code to see the filtered `roll`, `pitch`, and `yaw` readings
 
-- verify and upload the code the code to the `sic_mpu9250_driver module` via FTDI programmer.
+- use the sample code in your arduino project as you want.
